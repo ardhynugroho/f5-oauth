@@ -1,4 +1,4 @@
-OAuth Opaque Token
+Configuring F5 APM To Provide OAuth AS Service Using Opaque Token
 ====
 
 Creating OAuth Scope 
@@ -84,10 +84,13 @@ Click **Create New Instance** button to create new user database instance & fill
 
 .. image:: img/15-local-db-1.png
 
-Add Sample User Credentials
+Add User Credentials
 ----
 
-Create admin & operator users from menu: **Access  ››  Authentication : Local User DB : Users**
+Create users from menu: **Access  ››  Authentication : Local User DB : Users**
+
+- user/pass: admin/admin
+- user/pass: operator/operator
 
 .. image:: img/16-new-user-1.png
 
