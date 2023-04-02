@@ -157,7 +157,7 @@ Testing Opaque Token Request
 Get bearer token test using Postman
 
 Configure Postman as ``partner-app-1`` client then click the **Get New Access Token**
-Use Client ID & Secret generated in :ref:`add_oauth_client` section.
+Use Client ID & Secret generated in :ref:`add oauth client` section.
 
 .. image:: img/19-test-1.png 
 
