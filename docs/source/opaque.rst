@@ -9,7 +9,7 @@ OAuth Opaque Token
    - Scope Name: request
    - Caption: request
 
-   .. image:: img/Screenshot 2023-04-02 at 14.17.41.png
+   .. image:: img/11-new-scope.png
    
    Click **Repeat** button, and create another scope below:
    
