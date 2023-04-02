@@ -1,7 +1,7 @@
 OAuth Opaque Token
 ====
 
-Creating OAuth scope 
+Creating OAuth Scope 
 ----
 
 Navigate to **Access  ››  Federation : OAuth Authorization Server : Scope**
@@ -25,7 +25,7 @@ Click **Repeat** button, and create another scope below:
 - image.svg
 - image.webp
 
-Add an OAuth client 
+Add An OAuth Client 
 ----
 
 Navigate to **Access  ››  Federation : OAuth Authorization Server : Client Application**
@@ -40,11 +40,12 @@ Click **Create** button and fill in following parameters:
 - Scopes: request; image
  
 After creation, click to OAuth client name to see generated Client ID & Secret, save it to be used on later step.
+
 .. image:: img/12-oauth-client-1.png
 .. image:: img/12-oauth-client-2.png
 .. image:: img/12-oauth-client-3.png
 
-Add Oauth resource server (RS)
+Add Oauth Resource Server (RS)
 ----
 
 Navigate to **Access  ››  Federation : OAuth Authorization Server : Resource Server**
@@ -55,9 +56,10 @@ Click **Create** button and fill in following parameters:
 - Authentication Type: Secret
 
 After creation, click again to RS name to see resource server ID & Secret, save it to be used on later step.
+
 .. image:: img/13-oauth-rs-1.png
 
-Create OAuth service profile
+Create OAuth Profile
 ----
 
 Navigate to **Access  ››  Federation : OAuth Authorization Server : OAuth Profile**
@@ -65,9 +67,10 @@ Navigate to **Access  ››  Federation : OAuth Authorization Server : OAuth Pr
  - Name: oauth-opaque
  - Client Application: Move ``partner-app-1`` from Available to Selected
  - Resource Server: Move ``app-1-rs`` from Available to Selected
+
  .. image:: img/14-oauth-profile-1.png
 
-Create Identity Provider (IdP) using local-db
+Create Local Identity Provider (IdP)
 ----
 
 Navigate to **Access  ››  Authentication : Local User DB : Instances**
@@ -78,16 +81,17 @@ Click **Create New Instance** button to create new user database instance & fill
 - Lockout Interval (in seconds): 600
 - Lockout Threshold: 3
 - Dynamic User Remove Interval (in seconds): 1800
+
 .. image:: img/15-local-db-1.png
 
-Add sample user credentials
+Add Sample User Credentials
 ----
 
 Create admin & operator users from menu: **Access  ››  Authentication : Local User DB : Users**
 
 .. image:: img/16-new-user-1.png
 
-Create access policy
+Create Access Policy
 ----
 
 Navigate to  **Access  ››  Profiles / Policies : Access Profiles (Per-Session Policies)**
@@ -101,7 +105,7 @@ Navigate to  **Access  ››  Profiles / Policies : Access Profiles (Per-Sessio
 .. image:: img/17-ap-oauth-2.png
 .. image:: img/17-ap-oauth-3.png
 
-Edit policy flow
+Create Access Policy Flow
 ----
 
 Edit just created policy using Visual Policy Editor (VPE)
@@ -142,15 +146,16 @@ Create a virtual server to serve as OAuth Authorization Server service
 - SSL: clientssl
 - Access Profile: ap-oauth-as-1
     
-Testing opaque token request
+Testing Opaque Token Request
 ----
 
 Get bearer token test using Postman
 
-Configure Postman as partner-app-1 client
+Configure Postman as ``partner-app-1`` client then click the **Get New Access Token**
+
 .. image:: img/19-test-1.png 
 
-Login page
+Verify user credential
 
 .. image:: img/19-test-2.png
 
@@ -158,8 +163,8 @@ Authorization confirmation
 
 .. image:: img/19-test-3.png
 
-Opaque bearer token
+Opaque bearer token received from OAuth AS
 
 .. image:: img/19-test-4.png
 
-This conclude OAuth AS server creation.
+This conclude the configuration of OAuth AS server to generate opaque token.
