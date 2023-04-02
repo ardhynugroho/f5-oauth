@@ -56,6 +56,8 @@ OAuth Opaque Token
    - Client Application: Move ``partner-app-1`` from Available to Selected
    - Resource Server: Move ``app-1-rs`` from Available to Selected
 
+   .. image:: img/14-oauth-profile-1.png
+
 #. Create IDP using local-db from menu: **Access  ››  Authentication : Local User DB : Instances**
 
    Click **Create New Instance** button to create new user database instance & fill in following parameters:
@@ -65,7 +67,11 @@ OAuth Opaque Token
    - Lockout Threshold: 3
    - Dynamic User Remove Interval (in seconds): 1800
 
+   .. image:: img/15-local-db-1.png
+
 #. Add admin & operator users from menu: **Access  ››  Authentication : Local User DB : Users**
+
+   .. image:: img/16-new-user-1.png
 
 #. Create access policy
    
