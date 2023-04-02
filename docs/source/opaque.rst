@@ -35,6 +35,10 @@ OAuth Opaque Token
     
    After creation, click to OAuth client name to see generated Client ID & Secret, save it to be used on later step.
 
+   .. image:: img/12-oauth-client-1.png
+   .. image:: img/12-oauth-client-2.png
+   .. image:: img/12-oauth-client-3.png
+
 #. Add Oauth resource server (RS) from menu: **Access  ››  Federation : OAuth Authorization Server : Resource Server**
 
    Click **Create** button and fill in following parameters:
@@ -43,6 +47,8 @@ OAuth Opaque Token
    - Authentication Type: Secret
    
    After creation, click again to RS name to see resource server ID & Secret, save it to be used on later step.
+
+   .. image:: img/13-oauth-rs-1.png
 
 #. Create OAuth service profile from menu: **Access  ››  Federation : OAuth Authorization Server : OAuth Profile**
 
