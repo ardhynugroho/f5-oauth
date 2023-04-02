@@ -25,7 +25,7 @@ Click **Repeat** button, and create another scope below:
 - image.svg
 - image.webp
 
-Add An OAuth Client 
+Add OAuth Client 
 ----
 
 Navigate to **Access  ››  Federation : OAuth Authorization Server : Client Application**
@@ -38,7 +38,9 @@ Click **Create** button and fill in following parameters:
 - Grant Type: Authorization Code / Hybrid
 - Redirect URI(s): https://callback
 - Scopes: request; image
- 
+
+.. _get_client_id_secret:
+
 After creation, click to OAuth client name to see generated Client ID & Secret, save it to be used on later step.
 
 .. image:: img/12-oauth-client-1.png
@@ -155,6 +157,7 @@ Testing Opaque Token Request
 Get bearer token test using Postman
 
 Configure Postman as ``partner-app-1`` client then click the **Get New Access Token**
+Use Client ID & Secret generated in :ref:`get_client_id_secret`` section.
 
 .. image:: img/19-test-1.png 
 
