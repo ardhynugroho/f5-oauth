@@ -73,9 +73,7 @@ OAuth Opaque Token
 
    .. image:: img/16-new-user-1.png
 
-#. Create access policy
-   
-   **Access  ››  Profiles / Policies : Access Profiles (Per-Session Policies)**
+#. Create access policy from menu: **Access  ››  Profiles / Policies : Access Profiles (Per-Session Policies)**
 
    - Name: ap-oauth-as-1
    - Profile Type: All
@@ -84,25 +82,56 @@ OAuth Opaque Token
 
 #. Edit just created policy using Visual Policy Editor (VPE)
 
-   - Add Logon > Logon Page
-   - Add Authentication > LocalDB Auth
-   - Add Authentication > OAuth Authorization
-   - Change OAuth Authorization end to "Allow"
+   .. image:: img/18-vpe-1.png
+
+   Add Logon > Logon Page
+
+   .. image:: img/18-vpe-3.png
+
+   Add Authentication > LocalDB Auth
+
+   .. image:: img/18-vpe-4.png
+
+   Add Authentication > OAuth Authorization
+
+   .. image:: img/18-vpe-5.png
+
+   Change OAuth Authorization end to "Allow"
+
+   .. image:: img/18-vpe-6.png
+
+   The policy flow view
+
+   .. image:: img/18-vpe-7.png
 
    Apply Access Policy & Close the VPE
 
-#. Create VS
+#. Create Virtual Server to serve as OAuth Authorization Server
     
    - Name: oauth_as_vs
    - Destination Address/Mask: 10.1.10.70
    - Service Port: 443
    - HTTP Profile (Client): http
    - SSL: clientssl
-   - Access Profile: ap_authserver_1
+   - Access Profile: ap-oauth-as-1
     
-#. Test get bearer token
-    
-   test using Postman
+#. Get bearer token test using Postman
+
+   Configure Postman as partner-app-1 client
+
+   .. image:: img/19-test-1.png 
+   
+   Login page
+   
+   .. image:: img/19-test-2.png
+
+   Authorization confirmation
+
+   .. image:: img/19-test-3.png
+
+   Opaque bearer token
+   
+   .. image:: img/19-test-4.png
 
 #. Test using python
 
