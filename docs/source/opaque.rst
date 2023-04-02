@@ -8,6 +8,8 @@ OAuth Opaque Token
    - Name: request
    - Scope Name: request
    - Caption: request
+
+   .. image:: img/Screenshot 2023-04-02 at 14.17.41.png
    
    Click **Repeat** button, and create another scope below:
    
@@ -57,15 +59,13 @@ OAuth Opaque Token
    - Lockout Threshold: 3
    - Dynamic User Remove Interval (in seconds): 1800
 
-#. Add new users
-   
-   **Access  ››  Authentication : Local User DB : Users**
+#. Add admin & operator users from menu: **Access  ››  Authentication : Local User DB : Users**
 
 #. Create access policy
    
    **Access  ››  Profiles / Policies : Access Profiles (Per-Session Policies)**
 
-   - Name: ap_authserver_1
+   - Name: ap-oauth-as-1
    - Profile Type: All
    - OAuth Profile: 
    - Languages: English (en)
