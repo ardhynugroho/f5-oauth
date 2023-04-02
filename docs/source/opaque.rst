@@ -1,11 +1,16 @@
 OAuth Opaque Token
 ====
 
-1. Create Scope
-
-   **Access  ››  Federation : OAuth Authorization Server : Scope**
+#. Creating OAuth scope from menu: **Access  ››  Federation : OAuth Authorization Server : Scope**
    
-   - request
+   Click **Create** button and fill in following parameters:
+   
+   - Name: request
+   - Scope Name: request
+   - Caption: request
+   
+   Click **Repeat** button, and create another scope below:
+   
    - request.headers
    - request.ip
    - request.user-agent
@@ -15,43 +20,38 @@ OAuth Opaque Token
    - image.svg
    - image.webp
 
-#. Add OAuth client
-
-   **Access  ››  Federation : OAuth Authorization Server : Client Application**
+#. Add an OAuth client from menu: **Access  ››  Federation : OAuth Authorization Server : Client Application**
    
-   *Parameters:*
+   Click **Create** button and fill in following parameters:
    
-   - Name:
-   - Application Name
-   - Caption
+   - Name: partner-app-1
+   - Application Name: partner-app-1
+   - Caption: partner-app-1
    - Grant Type: Authorization Code / Hybrid
    - Redirect URI(s): https://callback
-   - Scopes:
+   - Scopes: request; image
     
-   After create, click to client name to see generated Client ID & Secret
+   After creation, click to OAuth client name to see generated Client ID & Secret, save it to be used on later step.
 
-#. Add Oauth resource server (RS)
+#. Add Oauth resource server (RS) from menu: **Access  ››  Federation : OAuth Authorization Server : Resource Server**
 
-   **Access  ››  Federation : OAuth Authorization Server : Resource Server**
-
-   - Name: http-bin_rs
+   Click **Create** button and fill in following parameters:
+   
+   - Name: app-1-rs
    - Authentication Type: Secret
-   - Finished
    
-   After create, click again to RS name to see resource server ID & secret
+   After creation, click again to RS name to see resource server ID & Secret, save it to be used on later step.
 
-#. Create OAuth service profile
+#. Create OAuth service profile from menu: **Access  ››  Federation : OAuth Authorization Server : OAuth Profile**
+
+   - Name: oauth-opaque
+   - Client Application: Move ``partner-app-1`` from Available to Selected
+   - Resource Server: Move ``app-1-rs`` from Available to Selected
+
+#. Create IDP using local-db from menu: **Access  ››  Authentication : Local User DB : Instances**
+
+   Click **Create New Instance** button to create new user database instance & fill in following parameters:
    
-   **Access  ››  Federation : OAuth Authorization Server : OAuth Profile**
-
-   - Name:
-   - Client Application: Move from Available to Selected
-   - Resource Server: Move from Available to Selected
-
-#. Create IDP using local-db
-
-   **Access  ››  Authentication : Local User DB : Instances**
-
    - Name: demo-users
    - Lockout Interval (in seconds): 600
    - Lockout Threshold: 3
