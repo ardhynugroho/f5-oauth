@@ -25,7 +25,7 @@ Click **Repeat** button, and create another scope below:
 - image.svg
 - image.webp
 
-.. _add_oauth_client:
+.. _add oauth client:
 
 Add OAuth Client 
 ----
@@ -157,7 +157,7 @@ Testing Opaque Token Request
 Get bearer token test using Postman
 
 Configure Postman as ``partner-app-1`` client then click the **Get New Access Token**
-Use Client ID & Secret generated in :ref:`add_oauth_client`` section.
+Use Client ID & Secret generated in :ref:`add_oauth_client` section.
 
 .. image:: img/19-test-1.png 
 
