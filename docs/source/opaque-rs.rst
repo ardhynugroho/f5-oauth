@@ -6,7 +6,8 @@ Create OAuth Provider
 
 Navigate to **Access  ››  Federation : OAuth Client / Resource Server : Provider**
 
-Create new OAuth provider with following parameters
+Create new OAuth provider with following parameters:
+
 - Name: f5-apm-opaque
 - Type: F5
 - Use Auto JWT: disabled/clear
