@@ -8,6 +8,5 @@ Contents
 
 .. toctree::
 
-   opaque
-   jwt
-   phantom
+   opaque-as
+   opaque-rs

@@ -47,6 +47,8 @@ After creation, click to OAuth client name to see generated Client ID & Secret, 
 .. image:: img/12-oauth-client-2.png
 .. image:: img/12-oauth-client-3.png
 
+.. _register oauth rs:
+
 Add Oauth Resource Server (RS)
 ----
 
