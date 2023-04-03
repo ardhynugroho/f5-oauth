@@ -58,8 +58,6 @@ Click **Create** button and configure following parameters:
 
 Then edit policy flow detils in VPE [#]_
 
-.. [#] Visual Policy Editor
-
 Change flow ending from **Deny** to **Allow** then apply & close VPE.
 
 .. image:: img/204-oauth-ap-3.png
@@ -90,8 +88,14 @@ Edit the policy flow using VPE.
     - Server: /Common/app-1
     - Scope Request: /common/F5ScopeRequest
 
+    .. image:: img/205-oauth-prp-2.png
+
 4. Save the changes
-5. Click (+) sign after **Start** then add ``Scope Check`` Subroutine
+#. Edit the end terminals to have ``allow`` & ``deny`` output
+
+    .. image:: img/205-oauth-prp-4.png
+
+#. Click (+) sign after **Start** then add ``Scope Check`` Subroutine
 
     .. image:: img/205-oauth-prp-3.png
 
@@ -102,7 +106,7 @@ The policy check flow should be like this
 Attach Access & Per-Request Policy Profile
 ----
 
-Edit the virtual server that serve ``app-1`` application.
+Edit ``app-1`` virtual server.
 Scroll down to **Access Policy** and configure following profile to the virtual server
 
 .. image:: img/206-access-policy-1.png
@@ -110,3 +114,4 @@ Scroll down to **Access Policy** and configure following profile to the virtual 
 Test The configuration
 ----
 
+.. [#] Visual Policy Editor
