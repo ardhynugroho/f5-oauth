@@ -21,7 +21,7 @@ It is actually VS listener address in the same F5 instance.
 
 Click **Save** to save the changes
 
-.. image: img/201-add-oauth-provider-1.png
+.. image:: img/201-oauth-provider-1.png
 
 Create OAuth Resource Server Profile
 ----
@@ -39,7 +39,7 @@ Configure following parameters:
 - Resource Server Secret: Input the secret obtained from step in :ref:`register oauth rs`
 - Resource Server's ServerSSL Profile Name: serverssl
 
-.. image: img/202-oauth-resource-server-1.png
+.. image:: img/202-oauth-resource-server-1.png
 
 Create Access Profile for Resource Server
 ----
@@ -53,8 +53,8 @@ Click **Create** button and configure following parameters:
 - OAuth Profile: oauth-opaque
 - Languages: English (en)
 
-.. image: img/204-oauth-ap-1.png
-.. image: img/204-oauth-ap-2.png
+.. image:: img/204-oauth-ap-1.png
+.. image:: img/204-oauth-ap-2.png
 
 Then edit policy flow detils in VPE [#]_
 
@@ -62,7 +62,7 @@ Then edit policy flow detils in VPE [#]_
 
 Change flow ending from **Deny** to **Allow** then apply & close VPE.
 
-.. image: img/204-oauth-ap-3.png
+.. image:: img/204-oauth-ap-3.png
 
 Create Per-Request Policy Profile for Resource Server
 ----
@@ -76,7 +76,7 @@ Configure following parameters:
 - Incomplete Action: Deny
 - Languages: Move ``English (en)`` from Factory Builtin to Accepted Languages
 
-.. image: img/205-oauth-prp-1.png
+.. image:: img/205-oauth-prp-1.png
 
 Click **Finished** to save the changes
 
@@ -93,11 +93,11 @@ Edit the policy flow using VPE.
 4. Save the changes
 5. Click (+) sign after **Start** then add ``Scope Check`` Subroutine
 
-    .. image: img/205-oauth-prp-3.png
+    .. image:: img/205-oauth-prp-3.png
 
 The policy check flow should be like this
 
-.. image: img/205-oauth-prp-5.png
+.. image:: img/205-oauth-prp-5.png
 
 Attach Access & Per-Request Policy Profile
 ----
@@ -105,7 +105,7 @@ Attach Access & Per-Request Policy Profile
 Edit the virtual server that serve ``app-1`` application.
 Scroll down to **Access Policy** and configure following profile to the virtual server
 
-.. image: img/206-access-policy-1.png
+.. image:: img/206-access-policy-1.png
 
 Test The configuration
 ----
