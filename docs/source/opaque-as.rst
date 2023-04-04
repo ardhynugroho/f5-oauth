@@ -1,4 +1,4 @@
-Configuring F5 APM To Provide OAuth AS Service Using Opaque Token
+Configure Opaque Acccess Token Provider
 ====
 
 Creating OAuth Scope 
@@ -153,7 +153,9 @@ Create a virtual server to serve as OAuth Authorization Server service
 - SSL: clientssl
 - Access Profile: ap-oauth-as-1
     
-Testing Opaque Token Request
+.. _test access token:
+
+Testing Opaque Access Token Request
 ----
 
 Get bearer token test using Postman
@@ -171,8 +173,8 @@ Authorization confirmation
 
 .. image:: img/19-test-3.png
 
-Opaque bearer token received from OAuth AS
+Opaque access token received from OAuth AS
 
 .. image:: img/19-test-4.png
 
-This conclude the configuration of OAuth AS server to generate opaque token.
+This conclude the configuration opaque access token provider.

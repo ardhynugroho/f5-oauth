@@ -1,4 +1,4 @@
-Configuring F5 APM As Resource Server Accepting Opaque Token
+Configure Access Using Opaque Token
 ====
 
 Create OAuth Provider
@@ -109,9 +109,28 @@ Attach Access & Per-Request Policy Profile
 Edit ``app-1`` virtual server.
 Scroll down to **Access Policy** and configure following profile to the virtual server
 
+- Access Profile: app-1-ap
+- Per-Request Policy: app-1-prp
+
 .. image:: img/206-access-policy-1.png
 
 Test The configuration
 ----
+
+Open previous Postman window from :ref:`test access token` activity.
+
+1. Get new access token
+
+   .. image:: img/207-test-1.png
+
+#. Set request: `https://10.1.10.102/headers` and set method as `GET`.
+   See the Authorization header value obtained from previous step.
+   Then click **Send** button to create request.
+
+   .. image:: img/207-test-2.png
+
+#. The request response shown like example below
+
+   .. image:: img/207-test-3.png
 
 .. [#] Visual Policy Editor
