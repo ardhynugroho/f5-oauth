@@ -41,6 +41,8 @@ Configure following parameters:
 
 .. image:: img/202-oauth-resource-server-1.png
 
+.. _rs access profile:
+
 Create Access Profile for Resource Server
 ----
 
@@ -114,7 +116,7 @@ Scroll down to **Access Policy** and configure following profile to the virtual 
 
 .. image:: img/206-access-policy-1.png
 
-Test The configuration
+Test The Configuration
 ----
 
 Open previous Postman window from :ref:`test access token` activity.
@@ -132,5 +134,9 @@ Open previous Postman window from :ref:`test access token` activity.
 #. The request response shown like example below
 
    .. image:: img/207-test-3.png
+
+This conclude F5 APM configuration as OAuth resource server using opaque access token.
+
+Next topic is how to implement phantom token (token conversion) model using F5 APM.
 
 .. [#] Visual Policy Editor
