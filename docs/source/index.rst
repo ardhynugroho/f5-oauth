@@ -10,3 +10,4 @@ Contents
 
    opaque-as
    opaque-rs
+   phantom
