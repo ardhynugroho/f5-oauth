@@ -64,6 +64,8 @@ Change flow ending from **Deny** to **Allow** then apply & close VPE.
 
 .. image:: img/204-oauth-ap-3.png
 
+.. _rs prp:
+
 Create Per-Request Policy Profile for Resource Server
 ----
 
