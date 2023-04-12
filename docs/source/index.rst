@@ -9,7 +9,7 @@ This is demo guide to configure F5 Access Policy Manager as...
 
 Also to demonstrate user object checking to prevent Broken Object Level Authorization (BOLA) attack
 
-.. image:: 00-topology-1.png
+.. image:: img/00-topology-1.png
 
 Contents
 ----
