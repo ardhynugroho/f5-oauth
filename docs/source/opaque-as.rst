@@ -1,4 +1,4 @@
-Configure Opaque Acccess Token Provider
+Configure Opaque Access Token Provider
 ====
 
 Creating OAuth Scope 
