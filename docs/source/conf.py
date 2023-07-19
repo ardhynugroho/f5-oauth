@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'f5-oauth'
+project = 'Access Control Using F5 APM'
 author = 'Ardhy Nugroho'
 
 release = '0.1'
