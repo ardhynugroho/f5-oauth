@@ -13,7 +13,10 @@ Create User Name Session Variable On Session Creation
 
 In this step, user name in the access token is extracted and saved to session variable.
 
-Create an iRule to extract user name from ``session.oauth.scope.last.introspect.username`` and save it as session variable ``session.custom.uname``::
+Create an iRule to extract user name from ``session.oauth.scope.last.introspect.username`` and save it as session variable ``session.custom.uname``
+
+.. code-block::
+  :linenos:
 
   when ACCESS_POLICY_COMPLETED {
     set uname [lindex [split [ACCESS::session data get "session.oauth.scope.last.introspect.username"] "."] 1]
